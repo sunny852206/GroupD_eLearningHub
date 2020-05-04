@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <React.StrictMode>hello world</React.StrictMode>,
+  <React.StrictMode>eLearning Hub</React.StrictMode>,
   document.getElementById('root')
 );
 
