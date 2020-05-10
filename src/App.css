@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+.wrap {
+  background: rgb(255, 250, 201);
+  border: 2px solid rgb(181, 176, 109);
+  margin: 15px 30px;
+  padding: 30px 0px;
+}
+.first {
+  margin: 50px 0 20px 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.second {
+  background: rgb(240, 214, 69);
+  border: 1px solid rgb(103, 22, 22);
+  margin: 50px 30px 20px 30px;
+  padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.profilePicture img {
+  border: 5px solid rgb(228, 196, 211);
+  outline: 2px solid rgb(132, 60, 60);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.userInfo {
+  margin-top: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.userInfo h1 {
+  font-size: 70px;
+  margin-bottom: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.UserProject1,
+.UserProject2,
+.UserProject3 {
+  border-radius: 25px;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.19);
+  padding: 70px;
+  margin: 20px 20px;
+  font-size: 25px;
+}
+
+.UserProject1 {
+  background: rgb(211, 214, 238);
+  border: 1px solid rgb(57, 61, 91);
+}
+
+.UserProject2 {
+  background: rgb(197, 236, 205);
+  border: 1px solid rgb(59, 98, 67);
+}
+
+.UserProject3 {
+  background: rgb(243, 193, 193);
+  border: 1px solid rgb(137, 55, 55);
+}
+
+.UserProject1:hover {
+  background: rgb(120, 134, 240);
+  border: 1px solid rgb(57, 61, 91);
+}
+
+.UserProject2:hover {
+  background: rgb(115, 235, 139);
+  border: 1px solid rgb(59, 98, 67);
+}
+
+.UserProject3:hover {
+  background: rgb(241, 118, 118);
+  border: 1px solid rgb(137, 55, 55);
 }
