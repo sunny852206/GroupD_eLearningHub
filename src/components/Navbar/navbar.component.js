@@ -36,6 +36,12 @@ export default class Navbar extends Component {
                   <h2>*Create A Project*</h2>
                 </Link>
               </div>
+              <div className='col-4 offset-8'>
+                <Link to='/user'>
+                  <h2>*Create Account*</h2>
+                </Link>
+              </div>
+              
             </div>
           </div>
         </div>

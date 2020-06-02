@@ -8,7 +8,7 @@ export default class Navbar extends Component {
         <div className='row'>
           <div className='col-8 offset-md-2 text-center'>
             <div className='title'>
-              <h1>eLearning Hub</h1>
+                <h1>eLearning Hub</h1>
             </div>
           </div>
         </div>
@@ -31,6 +31,7 @@ export default class Navbar extends Component {
                     <h2>About</h2>
                   </Link>
                 </div>
+
               </div>
             </div>
           </div>

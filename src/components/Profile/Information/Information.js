@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import { Nav } from 'react-bootstrap';
+import { Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
+import UserInfo from '../user-info.component';
 
 class Information extends Component {
   render() {
@@ -24,6 +28,7 @@ class Information extends Component {
             </div>
           </div>
         </div>
+        <Route path='/' exact component={UserInfo} />
       </div>
     );
   }
