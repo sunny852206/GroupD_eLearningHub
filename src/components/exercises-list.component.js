@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Exercise = (props) => (
   <tr>
@@ -9,9 +9,9 @@ const Exercise = (props) => (
     <td>{props.exercise.duration}</td>
     <td>{props.exercise.date.substring(0, 10)}</td>
     <td>
-      <Link to={'/edit/' + props.exercise._id}>edit</Link> |{' '}
+      <Link to={"/edit/" + props.exercise._id}>edit</Link> |{" "}
       <a
-        href='#'
+        href="#"
         onClick={() => {
           props.deleteExercise(props.exercise._id);
         }}
@@ -33,7 +33,7 @@ export default class ExercisesList extends Component {
 
   componentDidMount() {
     axios
-      .get('http://localhost:5000/exercises/')
+      .get("http://localhost:5000/exercises/")
       .then((response) => {
         this.setState({ exercises: response.data });
       })
@@ -43,7 +43,7 @@ export default class ExercisesList extends Component {
   }
 
   deleteExercise(id) {
-    axios.delete('http://localhost:5000/exercises/' + id).then((response) => {
+    axios.delete("http://localhost:5000/exercises/" + id).then((response) => {
       console.log(response.data);
     });
 
@@ -68,8 +68,8 @@ export default class ExercisesList extends Component {
     return (
       <div>
         <h3>Logged Exercises</h3>
-        <table className='table'>
-          <thead className='thead-light'>
+        <table className="table">
+          <thead className="thead-light">
             <tr>
               <th>Username</th>
               <th>Description</th>
