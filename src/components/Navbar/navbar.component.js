@@ -21,11 +21,6 @@ export default class Navbar extends Component {
 
               <div className='row'>
                 <div className='nav_top'>
-                  <Link to='/'>
-                    <h2>Home</h2>
-                  </Link>
-                </div>
-                <div className='nav_top'>
                   <Link to='/profile'>
                     <h2>Profile</h2>
                   </Link>
@@ -40,7 +35,10 @@ export default class Navbar extends Component {
 
             <div className='col-5 text-right'>
               <Link to='/project'>
-                <h2>*Create A Project*</h2>
+                <h2>*Create Project*</h2>
+              </Link>
+              <Link to='/user'>
+                <h2>*Create Account*</h2>
               </Link>
             </div>
           </div>
