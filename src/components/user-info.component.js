@@ -10,7 +10,7 @@ const User = (props) => (
         <td>
             <Link to={'/editUser/' + props.users._id}>edit</Link> |{' '}
             <a
-                href='#'
+                href='/#'
                 onClick={() => {
                 props.deleteUser(props.users._id);
                 }}
