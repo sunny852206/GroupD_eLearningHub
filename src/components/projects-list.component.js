@@ -7,11 +7,12 @@ const Project = (props) => (
   <tr>
     <td>{props.project.name}</td>
     <td>{props.project.subject}</td>
+    <td>{props.project.description}</td>
     <td>{props.project.date.substring(0, 10)}</td>
     <td>
       <Link to={'/edit/' + props.project._id}>edit</Link> |{' '}
       <a
-        href='#'
+        href='/#'
         onClick={() => {
           props.deleteProject(props.project._id);
         }}
@@ -64,16 +65,21 @@ export default class ProjectsList extends Component {
     });
   }
 
+
+
   render() {
+
     return (
       <div>
         <div>
-          <h3>Available projects</h3>
+          <br></br><br></br>
+          <h3>Projects</h3>
           <table className='table'>
             <thead className='thead-light'>
               <tr>
                 <th>Name</th>
                 <th>Subject</th>
+                <th>Description</th>
                 <th>Date</th>
                 <th>Actions</th>
               </tr>

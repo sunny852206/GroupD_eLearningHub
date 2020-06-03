@@ -4,11 +4,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 import Navbar from './components/Navbar/navbar.component';
-import Home from './components/Home/Home';
+import Login from './components/Login/Login';
 import Profile from './components/Profile/Profile';
 import About from './components/About/About';
 import CreateProject from './components/create-project.component';
 import EditProject from './components/edit-project.component';
+import CreateUser from './components/create-user.component';
+import EditUser from './components/edit-user.component';
+import UserInfo from './components/user-info.component';
 import Music from './components/Subject/Music/Music';
 import Math from './components/Subject/Math/Math';
 import Science from './components/Subject/Science/Science';
@@ -21,11 +24,14 @@ function App() {
       <Router>
         <div className='container'>
           <Navbar />
-          <Route path='/' exact component={Home} />
+          <Route path='/' exact component={Login} />
           <Route path='/profile' component={Profile} />
           <Route path='/about' component={About} />
           <Route path='/project' component={CreateProject} />
           <Route path='/edit/:id' component={EditProject} />
+          <Route path='/user' component={CreateUser} />
+          <Route path='/editUser/:id' component={EditUser} />
+          <Route path='/information' component={UserInfo} />
           <Route path='/music' component={Music} />
           <Route path='/math' component={Math} />
           <Route path='/science' component={Science} />
