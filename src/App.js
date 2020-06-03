@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 import Navbar from './components/Navbar/navbar.component';
-import Home from './components/Home/Home';
+import Login from './components/Login/Login';
 import Profile from './components/Profile/Profile';
 import About from './components/About/About';
 import CreateProject from './components/create-project.component';
@@ -24,7 +24,7 @@ function App() {
       <Router>
         <div className='container'>
           <Navbar />
-          <Route path='/' exact component={Home} />
+          <Route path='/' exact component={Login} />
           <Route path='/profile' component={Profile} />
           <Route path='/about' component={About} />
           <Route path='/project' component={CreateProject} />

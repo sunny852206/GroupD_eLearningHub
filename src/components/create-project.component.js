@@ -78,7 +78,7 @@ export default class CreateProject extends Component {
       .post("http://localhost:5000/projects/add", project)
       .then((res) => console.log(res.data));
 
-    window.location = "/";
+    window.location = "/profile";
   }
 
   render() {
