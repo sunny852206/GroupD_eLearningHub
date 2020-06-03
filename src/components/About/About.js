@@ -11,7 +11,7 @@ class About extends Component {
                 <div className='pic'>
                   <img
                     src='https://img.freepik.com/free-photo/golden-light-bulb-as-ideas-person_23-2148342808.jpg?size=664&ext=jpg' 
-                    alt='cool picture'
+                    alt=''
                   />
                   <div class="textPosition">THE MIND THAT OPENS TO A NEW IDEA NEVER RETURNS TO ITS ORIGINAL SIZE.</div>
                 </div>
