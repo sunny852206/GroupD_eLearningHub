@@ -80,7 +80,7 @@ export default class EditProject extends Component {
         project
       )
       .then((res) => console.log(res.data));
-    window.location = "/";
+    window.location = "/profile";
   }
 
   render() {
