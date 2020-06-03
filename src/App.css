@@ -1,175 +1,53 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .wrap {
   background: rgb(255, 236, 201);
   border: 2px solid rgb(247, 204, 125);
-  margin: 15px 15px;
+  margin: 30px 70px;
   padding: 30px 0px;
 }
 
-/* Index */
-.title h1 {
-  font-size: 70px;
-  padding: 10px;
+a {
+  color: black;
 }
 
-.navBar {
-  margin-top: 30px;
-  margin-bottom: 100px;
-}
-
-.navBar h1 {
-  font-size: 70px;
-  margin-bottom: 100px;
-  font-weight: bold;
-}
-
-h2 {
-  font-size: 40px;
-  font-weight: 700;
-}
-
-.subjectWrap {
-  background: rgb(248, 200, 97);
-  border: 2px solid rgb(189, 149, 75);
-  margin: 15px 30px;
-}
-
-.subjectPanel {
-  margin: 20px 30px 20px 30px;
-  padding: 0px;
-  font-weight: 600;
-}
-
-.mainPanel {
-  background: rgb(248, 200, 97);
-  border: 2px solid rgb(103, 22, 22);
-  margin: 50px 30px 20px 30px;
-  padding: 450px 0;
-}
-
-.subject1,
-.subject2,
-.subject3,
-.subject4,
-.subject5 {
-  border-radius: 15px;
-  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.19);
-  padding: 20px 20px;
-  margin: 10px 0px;
-  font-size: 25px;
-}
-
-.subject1 {
-  background: rgb(243, 193, 193);
-  border: 1px solid rgb(148, 81, 81);
-}
-
-.subject2 {
-  background: rgb(220, 197, 236);
-  border: 1px solid rgb(173, 104, 221);
-}
-
-.subject3 {
-  background: rgb(211, 214, 238);
-  border: 1px solid rgb(121, 126, 165);
-}
-
-.subject4 {
-  background: rgb(119, 181, 156);
-  border: 1px solid rgb(28, 86, 63);
-}
-
-.subject5 {
-  background: rgb(236, 121, 121);
-  border: 1px solid rgb(137, 55, 55);
-}
-
-.subject1:hover {
-  background: rgb(241, 112, 112);
-  border: 1px solid rgb(148, 81, 81);
-}
-
-.subject2:hover {
-  background: rgb(190, 119, 241);
-  border: 1px solid rgb(173, 104, 221);
-}
-
-.subject3:hover {
-  background: rgb(118, 132, 236);
-  border: 1px solid rgb(121, 126, 165);
-}
-
-.subject4:hover {
-  background: rgb(25, 155, 103);
-  border: 1px solid rgb(28, 86, 63);
-}
-
-.subject5:hover {
-  background: rgb(204, 65, 65);
-  border: 1px solid rgb(137, 55, 55);
-}
-
-/* UserProfile */
-.userProfile {
-  margin: 50px 0 20px 0;
-}
-
-.profilePicture img {
-  border: 5px solid rgb(228, 196, 211);
-  outline: 2px solid rgb(132, 60, 60);
-}
-
-.userInfo {
-  margin-top: 30px;
-}
-
-.userInfo h1 {
-  font-size: 70px;
-  margin-bottom: 100px;
-}
-
-.projectPanel {
-  background: rgb(248, 200, 97);
-  border: 2px solid rgb(103, 22, 22);
-  margin: 50px 30px 20px 30px;
-  padding: 10px;
-}
-
-.UserProject1,
-.UserProject2,
-.UserProject3 {
-  border-radius: 25px;
-  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.19);
-  padding: 70px;
-  margin: 20px 20px;
-  font-size: 25px;
-}
-
-.UserProject1 {
-  background: rgb(211, 214, 238);
-  border: 1px solid rgb(57, 61, 91);
-}
-
-.UserProject2 {
-  background: rgb(197, 236, 205);
-  border: 1px solid rgb(59, 98, 67);
-}
-
-.UserProject3 {
-  background: rgb(243, 193, 193);
-  border: 1px solid rgb(137, 55, 55);
-}
-
-.UserProject1:hover {
-  background: rgb(120, 134, 240);
-  border: 1px solid rgb(57, 61, 91);
-}
-
-.UserProject2:hover {
-  background: rgb(115, 235, 139);
-  border: 1px solid rgb(59, 98, 67);
-}
-
-.UserProject3:hover {
-  background: rgb(241, 118, 118);
-  border: 1px solid rgb(137, 55, 55);
+a:hover {
+  color: black;
 }
