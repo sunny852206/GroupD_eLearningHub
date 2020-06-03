@@ -12,7 +12,7 @@ const Project = (props) => (
     <td>
       <Link to={'/edit/' + props.project._id}>edit</Link> |{' '}
       <a
-        href='/#'
+        href='#'
         onClick={() => {
           props.deleteProject(props.project._id);
         }}
