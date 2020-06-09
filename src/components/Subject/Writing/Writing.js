@@ -1,20 +1,85 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+const Project = (props) => (
+  <tr>
 
-class Writing extends Component {
+  </tr>
+);
+
+
+
+export default class Writing extends Component {
+  constructor(props) {
+    super(props);
+    this.deleteProject = this.deleteProject.bind(this);
+    this.state = { projects: [] };
+  }
+
+  componentDidMount() {
+    axios
+      .get('http://localhost:5000/projects/')
+      .then((response) => {
+        this.setState({ projects: response.data });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
+  deleteProject(id) {
+    axios.delete('http://localhost:5000/projects/' + id).then((response) => {
+      console.log(response.data);
+    });
+
+    this.setState({
+      projects: this.state.projects.filter((el) => el._id !== id),
+    });
+  }
+
+  projectList() {
+    return this.state.projects.map((currentproject) => {
+      return (
+        <Project
+          project={currentproject}
+          deleteProject={this.deleteProject}
+          key={currentproject._id}
+        />
+      );
+    });
+  }
+
   render() {
+
     return (
-      <div className='container'>
-        <div className='row'>
-          <div className='col-12 text-center'>
-            <div>
-              <h2>Writing Page </h2>
-              <h2>*work in progress*</h2>
-            </div>
+      <div>
+        <div>
+          <br></br><br></br>
+          <h3>Writing</h3>
+          <div>
+
+            <table className='table'>
+              {this.state.projects.filter(function (project) {
+                return project.subject.includes('Writing')
+
+              }).map(function (Project) {
+                return <thead className='thead-light' key={Project.name}>
+                  <td><b>Name</b><br></br><br></br>{Project.name}</td>
+                  <td><b>Subject</b><br></br><br></br>{Project.subject}</td>
+                  <td><b>Description</b> <br></br><br></br>{Project.description}</td>
+                  <td> <b>Date</b> <br></br><br></br>{Project.date.substring(0, 10)}</td>
+                </thead>
+              })}
+
+
+            </table>
+
+
           </div>
+
         </div>
       </div>
     );
   }
 }
 
-export default Writing;
+

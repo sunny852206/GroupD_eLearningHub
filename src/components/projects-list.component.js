@@ -11,14 +11,7 @@ const Project = (props) => (
     <td>{props.project.date.substring(0, 10)}</td>
     <td>
       <Link to={'/edit/' + props.project._id}>edit</Link> |{' '}
-      <a
-        href='/#'
-        onClick={() => {
-          props.deleteProject(props.project._id);
-        }}
-      >
-        delete
-      </a>
+      <a href='/#' onClick={() => { props.deleteProject(props.project._id); }}>delete</a>
     </td>
   </tr>
 );
