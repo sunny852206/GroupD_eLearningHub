@@ -11,7 +11,9 @@ export default class Navbar extends Component {
           <div className='row'>
             <div className='col-md col6 text-left'>
               <div className='title'>
-                <h1>eLearning Hub</h1>
+                <Link to='/profile'>
+                  <h1>eLearning Hub</h1>
+                </Link>
               </div>
             </div>
 
@@ -24,6 +26,15 @@ export default class Navbar extends Component {
                 <Link to='/about'>
                   <h2>&nbsp;About </h2>
                 </Link>
+                <Link to='/'>
+                  <img class="icon_teacher"
+                    src='https://banner2.cleanpng.com/20190120/azp/kisspng-computer-icons-scalable-vector-graphics-user-profi-account-user-profile-avatar-svg-png-icon-free-down-5c4483f9061896.011432951547994105025.jpg'
+                    alt=''
+                  /> Login<br></br>
+
+
+                </Link>
+
               </div>
 
 

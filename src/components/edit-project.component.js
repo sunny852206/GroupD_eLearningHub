@@ -85,7 +85,7 @@ export default class EditProject extends Component {
 
   render() {
     return (
-      <div>
+      <div className='projectPanel'>
         <h3>Edit Project</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group">

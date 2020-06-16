@@ -83,7 +83,7 @@ export default class CreateProject extends Component {
 
   render() {
     return (
-      <div>
+      <div className='projectPanel'>
         <h3>Create New Project</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group">

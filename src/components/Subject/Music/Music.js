@@ -51,32 +51,29 @@ export default class Music extends Component {
   render() {
 
     return (
-      <div>
+      <div className='subject'>
+        <h3>Music</h3>
         <div>
-          <br></br><br></br>
-          <h3>Music</h3>
-          <div>
 
-            <table className='table'>
-              {this.state.projects.filter(function (project) {
-                return project.subject.includes('Music')
+          <table className='table'>
+            {this.state.projects.filter(function (project) {
+              return project.subject.includes('Music')
 
-              }).map(function (Project) {
-                return <thead className='thead-light' key={Project.name}>
-                  <td><b>Name</b><br></br><br></br>{Project.name}</td>
-                  <td><b>Subject</b><br></br><br></br>{Project.subject}</td>
-                  <td><b>Description</b> <br></br><br></br>{Project.description}</td>
-                  <td> <b>Date</b> <br></br><br></br>{Project.date.substring(0, 10)}</td>
-                </thead>
-              })}
+            }).map(function (Project) {
+              return <thead className='thead-light' key={Project.name}>
+                <td><b>Name</b><br></br><br></br>{Project.name}</td>
+                <td><b>Subject</b><br></br><br></br>{Project.subject}</td>
+                <td><b>Description</b> <br></br><br></br>{Project.description}</td>
+                <td> <b>Date</b> <br></br><br></br>{Project.date.substring(0, 10)}</td>
+              </thead>
+            })}
 
 
-            </table>
+          </table>
 
-
-          </div>
 
         </div>
+
       </div>
     );
   }

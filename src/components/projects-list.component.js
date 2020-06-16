@@ -64,8 +64,8 @@ export default class ProjectsList extends Component {
 
     return (
       <div>
-        <div>
-          <br></br><br></br>
+        <div className='projectPanel'>
+
 
           <div className='row'>
 
