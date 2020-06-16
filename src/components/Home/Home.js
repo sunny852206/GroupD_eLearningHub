@@ -2,11 +2,17 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import './Home.css';
+import axios from "axios";
 
 import ProjectsList from '../projects-list.component';
 
+
+
+
 export default class Home extends Component {
-  render() {
+	
+	
+	render() {
     return (
       <div className='container'>
         <div className='row'>
@@ -14,6 +20,8 @@ export default class Home extends Component {
             <h3>Subjects</h3>
           </div>
         </div>
+		
+		
         <div className='subjectWrap'>
           <div className='subjectPanel'>
             <div className='row'>
