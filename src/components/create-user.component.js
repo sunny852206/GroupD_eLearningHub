@@ -1,18 +1,34 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { findAllByTestId } from '@testing-library/react';
 
 export default class CreateUser extends Component {
   constructor(props) {
     super(props);
-
+    this.onChangeAccountType = this.onChangeAccountType.bind(this);
+    this.onChangeName = this.onChangeName.bind(this);
     this.onChangeUsername = this.onChangeUsername.bind(this);
     this.onChangeEmail = this.onChangeEmail.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
-      username: '',
-      email: '',
+      accountType: '',
+      name: 'Enter your name',
+      username: 'Enter a username',
+      email: 'Enter your email',
     }
+  }
+
+  onChangeAccountType(e) {
+    this.setState({
+      accountType: e.target.value
+    })
+  }
+
+  onChangeName(e) {
+    this.setState({
+      name: e.target.value
+    })
   }
 
   onChangeUsername(e) {
@@ -31,6 +47,8 @@ export default class CreateUser extends Component {
     e.preventDefault();
 
     const users = {
+      name: this.state.name,
+      accountType: this.state.accountType,
       username: this.state.username,
       email: this.state.email,
 
@@ -53,6 +71,27 @@ export default class CreateUser extends Component {
       <div>
         <h3>Create New User</h3>
         <form onSubmit={this.onSubmit}>
+        
+          <div className="form-group"> 
+          <label>Account Type: </label>
+            <select 
+              value={this.state.accountType} 
+              onChange={this.onChangeAccountType} 
+            >
+              <option value="Student">Student</option>
+              <option value="Teacher">Teacher</option>
+            </select>  
+          </div>
+
+          <div className="form-group"> 
+            <label>Name: </label>
+            <input type="text"
+                required
+                className="form-control"
+                value={this.state.name}
+                onChange={this.onChangeName}
+                />
+          </div>
           <div className="form-group"> 
             <label>Username: </label>
             <input  type="text"

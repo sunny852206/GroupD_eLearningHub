@@ -5,6 +5,8 @@ import './Home.css';
 
 const User = (props) => (
     <tr>
+        <td>{props.users.accountType}</td> 
+        <td>{props.users.name}</td>
         <td>{props.users.username}</td>
         <td>{props.users.email}</td>
         <td>
@@ -72,8 +74,11 @@ export default class UserInfo extends Component {
             <table className='table'>
               <thead className='thead-light'>
                 <tr>
+                  <th>Account Type</th>
+                  <th>Name</th>
                   <th>User name</th>
                   <th>Email</th>
+                  <th>Action</th> 
                 </tr>
               </thead>
               <tbody>{this.userInfo()}</tbody>
