@@ -3,33 +3,9 @@
   margin: 50px 0 20px 0;
 }
 
-.quote {
-  background: #f3f2f2;
-  border-left: 10px solid #ccc;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
-}
-.quote:before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
-}
-
-
-.icon_teacher {
-  width: 15px;
-}
-
-.icon_location {
-  width: 15px;
-}
-
 .profilePicture img {
-  border: 6px solid #ccc;
-  border-radius: 50%;
+  border: 5px solid rgb(228, 196, 211);
+  outline: 2px solid rgb(132, 60, 60);
 }
 
 .userInfo {
@@ -87,21 +63,6 @@
   background: rgb(241, 118, 118);
   border: 1px solid rgb(137, 55, 55);
 }
-
-.createProject {
-  background: rgb(115, 235, 139);
-  border: 1px solid rgb(59, 98, 67);
-  border-radius: 8px;
-  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.19);
-  padding: 10px;
-  margin: 10px 10px;
-  font-size: 15px;
-}
-
-.createProject:hover {
-  background: rgb(106, 216, 128);
-  border: 1px solid rgb(59, 98, 67);
-}
 =======
 /* Index */
 .title h1 {
@@ -111,7 +72,7 @@
 
 .navBar {
   margin-top: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 100px;
 }
 
 .navBar h1 {
@@ -120,16 +81,10 @@
   font-weight: bold;
 }
 
-h1 {
-	font-family: 'Dancing Script', cursive;
-
-}
-
 h2 {
   font-size: 30px;
   font-weight: 700;
   color: black;
-  display: inline;
 }
 
 .subjectWrap {

@@ -122,7 +122,6 @@ export default class CreateProject extends Component {
               onChange={this.onChangeDescription}
             />
           </div>
-          *work in progress*
           <form action='/upload' method="post" enctype="multipart/form-data">
             <input type='file' name='image' id='input-files' />
           </form>
