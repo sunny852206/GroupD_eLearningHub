@@ -51,9 +51,9 @@ export default class Math extends Component {
   render() {
 
     return (
-      <div>
+      <div className='subject'>
+
         <div>
-          <br></br><br></br>
           <h3>Math</h3>
           <div>
 

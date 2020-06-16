@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -17,6 +18,8 @@ import Math from './components/Subject/Math/Math';
 import Science from './components/Subject/Science/Science';
 import Writing from './components/Subject/Writing/Writing';
 import Art from './components/Subject/Art/Art';
+import logIn from "./components/auth/logIn";
+import registration from "./components/auth/registration";
 
 function App() {
   return (
@@ -24,7 +27,7 @@ function App() {
       <Router>
         <div className='container'>
           <Navbar />
-          <Route path='/' exact component={Login} />
+          <Route path='/' exact component={logIn} />
           <Route path='/profile' component={Profile} />
           <Route path='/about' component={About} />
           <Route path='/project' component={CreateProject} />
@@ -37,6 +40,7 @@ function App() {
           <Route path='/science' component={Science} />
           <Route path='/writing' component={Writing} />
           <Route path='/art' component={Art} />
+          <Route path='/registration' component={registration} />
         </div>
       </Router>
     </div>

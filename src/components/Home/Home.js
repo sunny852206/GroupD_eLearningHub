@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import './Home.css';
+import axios from "axios";
 
 import ProjectsList from '../projects-list.component';
 

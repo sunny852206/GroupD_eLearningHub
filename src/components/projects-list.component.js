@@ -10,8 +10,8 @@ const Project = (props) => (
     <td>{props.project.description}</td>
     <td>{props.project.date.substring(0, 10)}</td>
     <td>
-      <Link to={'/edit/' + props.project._id}>edit</Link> |{' '}
-      <a href='/#' onClick={() => { props.deleteProject(props.project._id); }}>delete</a>
+      <Link to={'/edit/' + props.project._id}><img class="icon_location" src='https://cdn1.iconfinder.com/data/icons/basic-ui-elements-2-5-filled-outline-44-expand/512/Basic_UI_Elements_2.5_-_Filled_Outline_-_44_-_Expand-03-512.png' alt='' /> </Link>
+      <a href='/profile' onClick={() => { props.deleteProject(props.project._id); }}><img class="icon_location" src='https://cdn2.iconfinder.com/data/icons/e-business-helper/240/627102-delete3-512.png' alt='' /></a>
     </td>
   </tr>
 );
@@ -64,9 +64,21 @@ export default class ProjectsList extends Component {
 
     return (
       <div>
-        <div>
-          <br></br><br></br>
-          <h3>Projects</h3>
+        <div className='projectPanel'>
+
+
+          <div className='row'>
+
+            <div className='col-md col6 text-left'><h3>Projects</h3></div>
+            <div className='col-md col-3 col-md offset-7 text-center'> <div className="form-group">
+              <Link to='/project'><input
+                type="submit"
+                value="Create Project"
+                className="btn btn-primary"
+              /></Link>
+            </div></div>
+          </div>
+
           <table className='table'>
             <thead className='thead-light'>
               <tr>
