@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { findAllByTestId } from '@testing-library/react';
 
 export default class CreateUser extends Component {
   constructor(props) {

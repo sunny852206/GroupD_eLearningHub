@@ -123,4 +123,11 @@ h2 {
   border-radius: 20px;
 }
 
+.loginPanel{
+  background: rgb(248, 200, 97);
+  border: 2px solid rgb(103, 22, 22);
+  margin: 50px 30px 200px 30px;
+  padding: 50px;
+  border-radius: 20px;
+}
 

@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
-
-import { Route } from 'react-router-dom';
-import ProjectsList from '../projects-list.component';
+import '../Home.css';
 import axios from "axios";
 
 export default class logIn extends Component {
@@ -52,41 +50,44 @@ export default class logIn extends Component {
 
     render() {
         return (
-            <div className='row'>
-                <div className='col-6 text-center'>
-                    <form onSubmit={this.handleSubmit}>
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="Email"
-                            value={this.state.email}
-                            onChange={this.handleChange}
-                            required
-                        />&nbsp;
+            <div className='loginPanel'>
+
+                <div className='row'>
+                    <div className='col-6 text-center'>
+                        <form onSubmit={this.handleSubmit}>
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Email"
+                                value={this.state.email}
+                                onChange={this.handleChange}
+                                required
+                            />&nbsp;
 
                         <input
-                            type="password"
-                            name="password"
-                            placeholder="Password"
-                            value={this.state.password}
-                            onChange={this.handleChange}
-                            required
-                        />&nbsp;
+                                type="password"
+                                name="password"
+                                placeholder="Password"
+                                value={this.state.password}
+                                onChange={this.handleChange}
+                                required
+                            />&nbsp;
 
                         <button type="submit">Login</button>
-                    </form>
-                </div>
-                <div className='col-6 text-center'>
-                    <div className='row'>
-
-                        <Link to='/registration'>
-                            <h5>Registration&nbsp;</h5>
-                        </Link>
-                        <Link to='/user'>
-                            <h5>Create Account</h5>
-                        </Link>
+                        </form>
                     </div>
+                    <div className='col-6 text-center'>
+                        <div className='row'>
 
+                            <Link to='/registration'>
+                                <h5>Registration&nbsp;|</h5>
+                            </Link>
+                            <Link to='/user'>
+                                <h5>&nbsp;Create Account</h5>
+                            </Link>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         );

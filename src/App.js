@@ -1,11 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 import Navbar from './components/Navbar/navbar.component';
-import Login from './components/Login/Login';
 import Profile from './components/Profile/Profile';
 import About from './components/About/About';
 import CreateProject from './components/create-project.component';

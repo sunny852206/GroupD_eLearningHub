@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const userSchema = new Schema(
   {
-    accounType: {
+    accountType: {
       type: String,
       required: true
     },
