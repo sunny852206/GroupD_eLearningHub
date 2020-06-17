@@ -4,15 +4,18 @@ import axios from 'axios';
 export default class EditUser extends Component {
   constructor(props) {
     super(props);
-
+    this.onChangeAccountType = this.onChangeAccountType.bind(this);
+    this.onChangeName = this.onChangeName.bind(this);
     this.onChangeUserName = this.onChangeUserName.bind(this);
     this.onChangeEmail = this.onChangeEmail.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
+      accountType: '',
+      name: '',
       username: '',
       email: '',
-      users:[],
+      users: [],
     };
   }
 
@@ -21,6 +24,8 @@ export default class EditUser extends Component {
       .get('http://localhost:5000/users/' + this.props.match.params.id)
       .then((response) => {
         this.setState({
+          accountType: response.data.accountType,
+          name: response.data.name,
           username: response.data.username,
           email: response.data.email,
         });
@@ -30,6 +35,18 @@ export default class EditUser extends Component {
       });
   }
 
+  onChangeAccountType(e) {
+    this.setState({
+      accountType: e.target.value,
+    });
+  }
+
+  onChangeName(e) {
+    this.setState({
+      name: e.target.value,
+    });
+  }
+
   onChangeUserName(e) {
     this.setState({
       username: e.target.value,
@@ -37,15 +54,17 @@ export default class EditUser extends Component {
   }
 
   onChangeEmail(e) {
-      this.setState({
-          email: e.target.value,
-      })
+    this.setState({
+      email: e.target.value,
+    })
   }
 
   onSubmit(e) {
     e.preventDefault();
 
     const users = {
+      accountType: this.state.accountType,
+      name: this.state.name,
       username: this.state.username,
       email: this.state.email,
     };
@@ -53,7 +72,7 @@ export default class EditUser extends Component {
     console.log(users);
 
     axios
-      .post('http://localhost:5000/users/update/'+ this.props.match.params.id, users)
+      .post('http://localhost:5000/users/update/' + this.props.match.params.id, users)
       .then((res) => console.log(res.data));
 
     window.location = '/information';
@@ -64,6 +83,25 @@ export default class EditUser extends Component {
       <div>
         <h3>Edit User</h3>
         <form onSubmit={this.onSubmit}>
+          <div className='form-group'>
+            <label>
+              Account Type:
+            <select value={this.state.accountType} onChange={this.onChangeAccountType}>
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+              </select>
+            </label>
+          </div>
+          <div className='form-group'>
+            <label>Name: </label>
+            <input
+              type='text'
+              required
+              className='form-control'
+              value={this.state.name}
+              onChange={this.onChangeName}
+            />
+          </div>
           <div className='form-group'>
             <label>Username: </label>
             <input

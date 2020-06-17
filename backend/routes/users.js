@@ -8,10 +8,14 @@ router.route('/').get((req, res) => {
 });
 
 router.route('/add').post((req, res) => {
+  const accountType = req.body.accountType;
+  const name = req.body.name;
   const username = req.body.username;
   const email = req.body.email;
 
   const newUser = new User({
+    accountType,
+    name,
     username,
     email,
   });
@@ -35,6 +39,8 @@ router.route('/:id').delete((req, res) => {
 router.route('/update/:id').post((req, res) => {
   User.findById(req.params.id)
     .then((users) => {
+      users.accountType = req.body.accountType;
+      users.name = req.body.name;
       users.username = req.body.username;
       users.email = req.body.email;
 

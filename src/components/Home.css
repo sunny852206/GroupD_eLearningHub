@@ -13,6 +13,7 @@
   font-size: 70px;
   margin-bottom: 100px;
   font-weight: bold;
+  text-decoration: none;
 }
 
 h2 {
@@ -45,7 +46,7 @@ h2 {
 .subject3,
 .subject4,
 .subject5 {
-  color: black;
+  color: back;
 
   font-size: 25px;
   border-radius: 25px;
@@ -110,5 +111,23 @@ h2 {
   background: rgb(248, 200, 97);
   border: 2px solid rgb(103, 22, 22);
   margin: 50px 30px 20px 30px;
-  padding: 10px;
+  padding: 20px;
+  border-radius: 20px;
 }
+
+.subject {
+  background: rgb(248, 200, 97);
+  border: 2px solid rgb(103, 22, 22);
+  margin: 20px 30px 20px 30px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.loginPanel{
+  background: rgb(248, 200, 97);
+  border: 2px solid rgb(103, 22, 22);
+  margin: 50px 30px 200px 30px;
+  padding: 50px;
+  border-radius: 20px;
+}
+

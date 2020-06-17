@@ -83,7 +83,7 @@ export default class CreateProject extends Component {
 
   render() {
     return (
-      <div>
+      <div className='projectPanel'>
         <h3>Create New Project</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group">
@@ -122,7 +122,6 @@ export default class CreateProject extends Component {
               onChange={this.onChangeDescription}
             />
           </div>
-          *work in progress*
           <form action='/upload' method="post" enctype="multipart/form-data">
             <input type='file' name='image' id='input-files' />
           </form>
