@@ -1,6 +1,6 @@
 /* Index */
 .title h1 {
-  font-size: 70px;
+  font-size: 20px;
   padding: 10px;
 }
 
@@ -52,18 +52,17 @@ h2 {
   margin: 10px 0px;
 }
 
-.subjectPanel a{
-  color:black;
+.subjectPanel a {
+  color: black;
   font-size: 20px;
-
 }
 
-a{
-  color:black;
+a {
+  color: black;
 }
 
-a:hover{
-  color:black;
+a:hover {
+  color: black;
 }
 
 .subject1 {

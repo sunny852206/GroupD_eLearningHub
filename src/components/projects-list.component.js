@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
-import './Home.css';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import "./Home.css";
 
 const Project = (props) => (
   <tr>
@@ -10,8 +10,25 @@ const Project = (props) => (
     <td>{props.project.description}</td>
     <td>{props.project.date.substring(0, 10)}</td>
     <td>
-      <Link to={'/edit/' + props.project._id}><img class="icon_location" src='https://cdn1.iconfinder.com/data/icons/basic-ui-elements-2-5-filled-outline-44-expand/512/Basic_UI_Elements_2.5_-_Filled_Outline_-_44_-_Expand-03-512.png' alt='' /> </Link>
-      <a href='/profile' onClick={() => { props.deleteProject(props.project._id); }}><img class="icon_location" src='https://cdn2.iconfinder.com/data/icons/e-business-helper/240/627102-delete3-512.png' alt='' /></a>
+      <Link to={"/edit/" + props.project._id}>
+        <img
+          class="icon_location"
+          src="https://cdn1.iconfinder.com/data/icons/basic-ui-elements-2-5-filled-outline-44-expand/512/Basic_UI_Elements_2.5_-_Filled_Outline_-_44_-_Expand-03-512.png"
+          alt=""
+        />{" "}
+      </Link>
+      <a
+        href="/profile"
+        onClick={() => {
+          props.deleteProject(props.project._id);
+        }}
+      >
+        <img
+          class="icon_location"
+          src="https://cdn2.iconfinder.com/data/icons/e-business-helper/240/627102-delete3-512.png"
+          alt=""
+        />
+      </a>
     </td>
   </tr>
 );
@@ -27,7 +44,7 @@ export default class ProjectsList extends Component {
 
   componentDidMount() {
     axios
-      .get('http://localhost:5000/projects/')
+      .get("http://localhost:5000/projects/")
       .then((response) => {
         this.setState({ projects: response.data });
       })
@@ -37,7 +54,7 @@ export default class ProjectsList extends Component {
   }
 
   deleteProject(id) {
-    axios.delete('http://localhost:5000/projects/' + id).then((response) => {
+    axios.delete("http://localhost:5000/projects/" + id).then((response) => {
       console.log(response.data);
     });
 
@@ -58,29 +75,43 @@ export default class ProjectsList extends Component {
     });
   }
 
-
-
   render() {
-
     return (
       <div>
-        <div className='projectPanel'>
-
-
-          <div className='row'>
-
-            <div className='col-md col6 text-left'><h3>Projects</h3></div>
-            <div className='col-md col-3 col-md offset-7 text-center'> <div className="form-group">
-              <Link to='/project'><input
-                type="submit"
-                value="Create Project"
-                className="btn btn-primary"
-              /></Link>
-            </div></div>
+        <div className="projectPanel">
+          <div className="PanelTitle">
+            <div className="TitleLeft">
+              <h3>Projects</h3>
+            </div>
+            <div className="TitleRight">
+              <Link to="/project">
+                <input
+                  type="submit"
+                  value="Create Project"
+                  className="CreateBtn"
+                />
+              </Link>
+            </div>
           </div>
+          {/* <div className="row">
+            <div className="col-md col6 text-left">
+              <h3>Projects</h3>
+            </div>
+            <div className="col-md col-3 col-md offset-7 text-center">
+              <div className="form-group">
+                <Link to="/project">
+                  <input
+                    type="submit"
+                    value="Create Project"
+                    className="btn btn-primary"
+                  />
+                </Link>
+              </div>
+            </div>
+          </div> */}
 
-          <table className='table'>
-            <thead className='thead-light'>
+          <table className="table">
+            <thead className="thead-light">
               <tr>
                 <th>Name</th>
                 <th>Subject</th>

@@ -1,12 +1,27 @@
-.title {
-  margin: -10px;
+.NavBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  gap: 1rem;
+  overflow: auto;
 }
 
-.nav {
-  margin: 10px 0px 50px 0px;
+.MiddleNav {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
 }
 
-.nav_top {
-  margin: 0px 0px 50px 15px
+.RightNav {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
 }
 
+.Logo {
+  font-weight: bold;
+  font-size: 20px;
+}

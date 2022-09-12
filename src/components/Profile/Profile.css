@@ -1,8 +1,19 @@
-<<<<<<< HEAD
-.userProfile {
+/* .userProfile {
   margin: 50px 0 20px 0;
+} */
+.FullSection {
+  position: relative;
+  display: grid;
+  /* left(profile)   mid(post)   right(rightside)*/
+  grid-template-columns: 18rem auto;
+  gap: 1rem;
 }
-
+.Profile {
+  margin-top: 3rem;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
 .quote {
   background: #f3f2f2;
   border-left: 10px solid #ccc;
@@ -27,8 +38,10 @@
 }
 
 .profilePicture img {
-  border: 6px solid #ccc;
+  width: 70%;
+  border: none;
   border-radius: 50%;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
 }
 
 .userInfo {
@@ -120,8 +133,7 @@
 }
 
 h1 {
-	font-family: 'Dancing Script', cursive;
-
+  font-family: "Dancing Script", cursive;
 }
 
 h2 {
@@ -138,9 +150,8 @@ h2 {
 }
 
 .subjectPanel {
-  margin: 20px 30px 20px 30px;
-  padding: 0px;
-  font-weight: 600;
+  display: flex;
+  gap: 1rem;
 }
 
 .mainPanel {
@@ -155,10 +166,10 @@ h2 {
 .subject3,
 .subject4,
 .subject5 {
-  color: black;
+  color: rgb(45, 34, 34);
 
   font-size: 25px;
-  border-radius: 25px;
+  border-radius: 35px;
   box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.19);
   padding: 20px 20px;
   margin: 10px 0px;
@@ -168,7 +179,6 @@ h2 {
 .subject1 {
   background: rgb(243, 193, 193);
   border: 1px solid rgb(148, 81, 81);
-  color: black;
 }
 
 .subject2 {
